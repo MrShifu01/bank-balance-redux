@@ -33,31 +33,37 @@ function App() {
               <p className='header-text'>Select Action</p>
             </div>
             <div className='header-bottom'>
-              <div className='header-bottom-amount'>{balance.toFixed(2)}</div>
+              <div className='header-bottom-amount'>R{balance.toFixed(2)}  <span className='zar'>ZAR</span></div>
+              <div className='header-bottom-dw'>
+                <div className='form-container'>
+                  <form className='form'>
+                    <label>
+                      <input
+                      className='amount-input'
+                      type='text'
+                      name='value'
+                      onChange={(e) => setUserAmount(e.target.value)}
+                      value={userAmount}
+                      />
+                    </label>
+                    <div className='button-container'>
+                      <button className='deposit-button' type='submit' onClick={handleDepsit}>Deposit</button>
+                      <button className='withdraw-button' type='submit' onClick={handleWithdraw}>Withdraw</button>
+                    </div>
+                  </form>
+                </div>
+
+              </div>
             </div>
             
           </div>
-          
-          <div className='form'>
-            <form className='deposit'>
-              <label>
-                <input
-                type='text'
-                name='value'
-                onChange={(e) => setUserAmount(e.target.value)}
-                value={userAmount}
-                />
-              </label>
-              <button type='submit' onClick={handleDepsit}>Deposit</button>
-              <button type='submit' onClick={handleWithdraw}>Withdraw</button>
-            </form>
+          <div className='bottom'>
+            <div className='other-buttons'>
+              <button className='interest' onClick={() => dispatch(increaseByInterest())}>Interest</button>
+              <button className='charges' onClick={() => dispatch(decreaseByCharges())}>Charges</button>
+            </div>
           </div>
-
-      <div className='Buttons'>
-        <button onClick={() => dispatch(increaseByInterest())}>Interest</button>
-        <button onClick={() => dispatch(decreaseByCharges())}>Charges</button>
       </div>
-    </div>
     </div>
   );
 }
