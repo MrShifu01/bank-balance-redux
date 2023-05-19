@@ -1,13 +1,77 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --clr-black:#050505;
+  --clr-dark:#131519;
+  --clr-medium:#212329;
+  --clr-light:#88898D;
+  --clr-green:#65DA98;
+  --clr-red:#E36B8D;
 }
+
+body {
+  margin: 0;
+  background-color: var(--clr-black);
+}
+
+.nav {
+  width: 100vw;
+  background-color: var(--clr-medium);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  font-family: "Kumbh Sans";
+  font-weight: 200;
+  color: var(--clr-light);
+  font-size: .5rem;
+  gap: 1rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 1000px;
+  margin: 20px auto;
+  background-color: var(--clr-medium);
+  border-radius: 5px;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-title {
+  color: white;
+  font-family: "Roboto";
+  padding: 0 20px;
+}
+
+.header-text {
+  color: var(--clr-light);
+  padding: 0 20px;
+}
+
+.header-bottom {
+  background-color: var(--clr-dark);
+}
+
