@@ -1,9 +1,12 @@
+/* Importing fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Roboto&display=swap');
 
+/* Global styles */
 * {
   box-sizing: border-box;
 }
 
+/* Define color variables using CSS variables */
 :root {
   --clr-black:#050505;
   --clr-dark:#131519;
@@ -13,11 +16,13 @@
   --clr-red:#E36B8D;
 }
 
+/* Body styles */
 body {
   margin: 0;
   background-color: var(--clr-black);
 }
 
+/* Navigation styles */
 .nav {
   width: 100vw;
   background-color: var(--clr-medium);
@@ -39,11 +44,13 @@ body {
   gap: 1rem;
 }
 
+/* Main container styles */
 .container {
   display: flex;
   flex-direction: column;
 }
 
+/* Header styles */
 .header {
   display: flex;
   flex-direction: column;
@@ -54,12 +61,14 @@ body {
   border-radius: 5px;
 }
 
+/* Header top section styles */
 .header-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+/* Header title styles */
 .header-title {
   color: white;
   font-family: "Roboto";
@@ -67,12 +76,14 @@ body {
   font-size: 1rem;
 }
 
+/* Header text styles */
 .header-text {
   color: var(--clr-light);
   padding: 0 30px;
   font-size: .6rem;
 }
 
+/* Header bottom section styles */
 .header-bottom {
   background-color: var(--clr-dark);
   padding: 5px;
@@ -81,6 +92,7 @@ body {
   display: flex;
 }
 
+/* Header bottom amount styles */
 .header-bottom-amount {
   font-family: "Kumbh Sans";
   text-align: center;
@@ -89,6 +101,7 @@ body {
   color: white;
 }
 
+/* Header bottom deposit/withdraw styles */
 .header-bottom-dw {
   width: 50%;
   background-color: var(--clr-medium);
@@ -98,15 +111,18 @@ body {
   color: white;
 }
 
+/* ZAR styles */
 .zar {
   font-size: .4rem;
   color: var(--clr-light);
 }
 
+/* Amount input styles */
 .amount-input {
   width: 100%;
 }
 
+/* Form styles */
 .form {
   display: flex;
   flex-direction: column;
@@ -114,12 +130,14 @@ body {
   align-items: center;
 }
 
+/* Button container styles */
 .button-container {
   margin-top: 20px;
   display: flex;
   gap: 10px;
 }
 
+/* Deposit button styles */
 .deposit-button {
   background-color: var(--clr-green);
   font-size: .5rem;
@@ -132,8 +150,14 @@ body {
   padding-bottom: 5px ;
   box-shadow: inset 3px 3px 2px rgba(0,0,0,0.1);
   box-shadow: 3px 3px 2px rgba(0,0,0,0.1);
+  cursor: pointer;
 }
 
+.deposit-button:hover{
+  opacity: .7;
+}
+
+/* Withdraw button styles */
 .withdraw-button  {
   background-color: var(--clr-red);
   font-size: .5rem;
@@ -146,8 +170,13 @@ body {
   padding-bottom: 5px ;
   box-shadow: inset 3px 3px 2px rgba(0,0,0,0.1);
   box-shadow: 3px 3px 2px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+.withdraw-button:hover{
+  opacity: 0.7;
 }
 
+/* Bottom section styles */
 .bottom {
   display: flex;
   flex-direction: column;
@@ -161,11 +190,13 @@ body {
   padding: 30px;
 }
 
+/* Other buttons styles */
 .other-buttons{
   display: flex;
   gap: 10px;
 }
 
+/* Interest button styles */
 .interest {
   background-color: var(--clr-green);
   font-size: 1rem;
@@ -178,8 +209,13 @@ body {
   padding-bottom: 5px ;
   box-shadow: inset 3px 3px 2px rgba(0,0,0,0.1);
   box-shadow: 3px 3px 2px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+.interest:hover{
+  opacity: 0.7;
 }
 
+/* Charges button styles */
 .charges {
   background-color: var(--clr-red);
   font-size: 1rem;
@@ -192,5 +228,10 @@ body {
   padding-bottom: 5px ;
   box-shadow: inset 3px 3px 2px rgba(0,0,0,0.1);
   box-shadow: 3px 3px 2px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.charges:hover{
+  opacity: 0.7;
 }
 

@@ -1,22 +1,30 @@
+
+// Importing the various modules and hooks
 import { useSelector, useDispatch } from 'react-redux'
 import { increaseByDeposit, increaseByInterest, decreaseByWithdraw, decreaseByCharges } from './store/balance';
 import './App.css';
 import { useState } from 'react';
 import NavBar from './components/NavBar';
 
+// Setting up the main component
 function App() {
+  // setting the useState for the input amount
   const [userAmount, setUserAmount] = useState([])
 
+  // getting the balance from the store with useSeletor
   const balance = useSelector((state) => state.balance.value)
 
+  // initializing the dispatch hook
   const dispatch = useDispatch()
 
+  // to handle the input deposit amount
   const handleDepsit = (e) => {
     e.preventDefault()
     dispatch(increaseByDeposit(Number(userAmount)))
     setUserAmount([])
   }
 
+  // to handle the withdraw input amount
   const handleWithdraw = (e) => {
     e.preventDefault()
     dispatch(decreaseByWithdraw(Number(userAmount)))
@@ -38,6 +46,7 @@ function App() {
                 <div className='form-container'>
                   <form className='form'>
                     <label>
+                      {/* user inputs amount to be dealt with */}
                       <input
                       className='amount-input'
                       type='text'
@@ -46,6 +55,7 @@ function App() {
                       value={userAmount}
                       />
                     </label>
+                    {/* choose what to do with the user input */}
                     <div className='button-container'>
                       <button className='deposit-button' type='submit' onClick={handleDepsit}>Deposit</button>
                       <button className='withdraw-button' type='submit' onClick={handleWithdraw}>Withdraw</button>
@@ -57,6 +67,7 @@ function App() {
             </div>
             
           </div>
+          {/* dealing with the interest and charges calculations */}
           <div className='bottom'>
             <div className='other-buttons'>
               <button className='interest' onClick={() => dispatch(increaseByInterest())}>Interest</button>

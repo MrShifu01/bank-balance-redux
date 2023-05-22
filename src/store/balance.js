@@ -1,13 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+// Create a new slice for managing balance state
 export const balanceSlice = createSlice({
-    
+
+    // Specify the name of the slice
     name: "balance",
 
+    // Set the initial state
     initialState: {
         value: 1000
     },
 
+    // Define reducers to update the state
     reducers: {
         increaseByDeposit: (state, action) => {
             state.value += action.payload
@@ -27,6 +31,8 @@ export const balanceSlice = createSlice({
     }
 })
 
+// Extract the action creators from the slice
 export const { increaseByDeposit, increaseByInterest, decreaseByWithdraw, decreaseByCharges } = balanceSlice.actions
 
+// Export the reducer function
 export default balanceSlice.reducer

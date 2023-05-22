@@ -1,5 +1,6 @@
 import '../index.css'
 
+// Creating a fake Navbar just for the look fo the app and to practice a bit
 function NavBar() {
   return (
     <div className='nav'>
